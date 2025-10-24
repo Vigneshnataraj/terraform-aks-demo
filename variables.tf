@@ -1,4 +1,23 @@
-client_id = "${secrets.getValue("ARM_CLIENT_ID")}"
-client_secret = "${secrets.getValue("ARM_CLIENT_SECRET")}"
-tenant_id = "${secrets.getValue("ARM_TENANT_ID")}"
-subscription_id = "${secrets.getValue("ARM_SUBSCRIPTION_ID")}"
+variable "client_id" {
+  description = "Azure Client ID"
+  type        = string
+  sensitive   = true
+}
+
+variable "client_secret" {
+  description = "Azure Client Secret"
+  type        = string
+  sensitive   = true
+}
+
+variable "tenant_id" {
+  description = "Azure Tenant ID"
+  type        = string
+  sensitive   = true
+}
+
+variable "subscription_id" {
+  description = "Azure Subscription ID"
+  type        = string
+  sensitive   = true
+}
